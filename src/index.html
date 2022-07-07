@@ -56,7 +56,7 @@
       }
 
       a {
-        color: rgb(151, 149, 149);
+        color: rgb(137, 135, 137);
         text-decoration: none;
         border-bottom: 1px solid;
       }
@@ -162,47 +162,37 @@
         justify-content: space-between;
       }
 
+      h4.four {
+        color: white;
+        display: inline-block;
+        background: rgb(111, 113, 114);
+        margin: 2px;
+        font-weight: normal;
+      }
+
       .openSource h3 {}
     </style>
-    <style>
-      .jobs {}
 
-      .jobs>h2 {}
-
-      .jobs>ol {}
-
-      .jobs>ol>li {
-        margin: 12px 0;
-      }
-
-      .jobs header {
-        display: flex;
-        color: #666;
-        margin-bottom: 12px;
-      }
-
-      .jobs header>h3 {
-        font-size: 18px;
-        color: #333;
-      }
-
-      .jobs header>h4 {
-        margin-left: 1em;
-        font-size: 18px;
-      }
-
-      .jobs header>span {
-        font-size: 18px;
-        margin-left: auto;
-      }
-    </style>
 
     <style media="print">
       .wrapper>.skills>div {
         display: none;
       }
     </style>
+    <style>
+      li>div {
+        margin: 5px 0;
 
+      }
+
+      code {
+        background: rgb(235, 235, 232);
+        font-size: 17px;
+        font-weight: bold;
+        margin: 0 4px;
+        color: black;
+      }
+    </style>
     <style>
       @media (max-width: 500px) {
         body {
@@ -221,12 +211,6 @@
         .jobs header {
           flex-direction: column;
         }
-
-        .jobs header>h3,
-        .jobs header>h4,
-        .jobs header>span {
-          margin: 0;
-        }
       }
     </style>
   </head>
@@ -235,15 +219,25 @@
     <article>
       <section class="bio">
         <h1>杜田田</h1>
-        <!-- <img src="./images/1.jpg" alt="" width="100" height="142"> -->
+        <img src="./images/1.jpg" alt="" width="100" height="142">
         <p>
           女 | 24岁 | 前端开发工程师 | 北京
         </p>
         <p>
-          手机：17335977725 | 微信：17335977725 | 邮箱：1737438545@qq.com
+          手机：17335977725 | 微信：17335977725 | 邮箱：dutiantianweb@163.com
         </p>
       </section>
-
+      <section class="education">
+        <h2>教育经历</h2>
+        <p>
+          <span><time>2017年</time>~<time>2020年</time></span>
+          洛阳理工学院 商务英语 大专
+        </p>
+        <p>
+          <span><time>2020年</time>~<time>2023年(在读）</time></span>
+          信阳师范学院 教育学 本科
+        </p>
+      </section>
 
       <section class="skills">
         <h2>技能</h2>
@@ -257,7 +251,7 @@
             <li>熟练掌握 <strong>Vue全家桶</strong>的使用，包括 VueCli、VueRouter、Vuex 等</li>
             <li>熟悉掌握原生JavaScript、ES6语法，掌握重要概念如:</li>
             <li><strong>原型链、闭包、作用域链、面向对象、this、Aiax、new、节流防抖、发布订阅、Promise</strong></li>
-            <li>熟悉运用前端开发工具，包括<strong>Git，npm/yarn </strong>等，有node.js的使用经验/li>
+            <li>熟悉运用前端开发工具，包括<strong>Git，npm/yarn </strong>等，有node.js的使用经验</li>
             <li>熟悉运用 <strong>TypeScript</strong> 的使用，我的项目就是 TS 实现的</li>
             <li>熟悉运用DOM API 、节点的增删改查，了解 <strong>Webpack </strong>的配置和优化</li>
 
@@ -270,12 +264,51 @@
         <ol>
           <li>
             <header>
-              <h3>我爱记账</h3>
+              <h3 class="three">基于 vue3 的蓝莓UI库</h3>
+
+              <span>
+                <a href="https://github.com/Flandutiantian/vue3">源码链接</a>
+                <a href="https://flandutiantian.github.io/lunzi-ui-website/">项目预览</a>
+              </span>
+            </header>
+            <div>技术栈：<code>vue3</code> <code>TypeScript</code><code>Vite</code> <code>Parcel</code></div>
+            <h4 class="four">项目描述：</h4>
+            <p>这是一个基于 <strong>Vue 3</strong> + <strong>TypeScript</strong> 的 UI 库，涵盖了 Button, Tabs, Switch, Dialog …
+              等常见UI组件。</p>
+            <p>深入研究 Vue 3, 使用了 <strong>setup</strong>、<strong>onMounted</strong>、
+              <strong>watchEffect</strong>、<strong>ref</strong>、<strong>computed</strong>等Compositioin
+              API,
+            </p>
+            <p>模块化的源代码筍洁明了，易于阅读,可在线查看代码，并支持 PC 和手机浏览。</p>
+            <p>Vue 3 有许多新特性和功能，其中最突出一点就是组合式 API，围绕 setup 入口函数进行编程，打破
+              Vue 2 的模板语法固有模式，同时也可结合使用</p>
+            <h4 class="four">项目经验：</h4>
+
+            <p> 使用 Vite 前端开发工具进行构建，其对于 Vue 3 、TypeScript 组合支持性极佳，开盒即用，项目的构</p>
+            <p> 建快捷高效。开发过程中项目中各个组件拆分合理，分析需求、分解思路清晰，可实现高效模块化编程
+              开发。</p>
+            <p>使用前端路由 VueRouter 搭建 SFC 单文件应用，避免发送不必要的服务器请求，降低负担。
+            </p>
+
+            <p>可以使用 props 和自定义事件解决父子组件之间的通信问题，也可以使用 inject / provide 组合方法轻
+              松实现跨级访问祖先组件属性和方法。</p>
+            <p>采用 TypeScript 语言代替 JavaScript 进行开发，规范变量、对象的定义和传参类型，通过类型检查，
+              更早发现及修正 bug 。并且 TypeScript 具有更好的智能提示，可通过安装一些插件加强体验。</p>
+            <p>封装对话框和弹出消息组件，用函数式编程的思想，创建虚拟节点，并 render 渲染实现唤出组件。</p>
+            <p>封装组件需要注意影响最小化原则，各项设置尽量只影响自己封装的组件。不要影响用户的项目编写，
+              不要与用户常见的命名冲突。</p>
+
+          </li>
+          <li>
+            <header>
+              <h3 class="three">基于 vue 的记天天记账 应用</h3>
               <span>
                 <a href="https://github.com/Flandutiantian/wangcai">源码私有</a>
                 <a href="https://flandutiantian.github.io/money-website/">项目预览</a>
               </span>
             </header>
+            <div>技术栈：<code>vue2</code> <code>TypeScript</code><code>Webpack</code></div>
+            <h4 class="four">项目描述：</h4>
             <p>
               这是我从自己的需求出发，设计出的极简记账应用，特点是快速记账，可以通过图表查看自己的消费习惯。</p>
             <p>
@@ -296,44 +329,50 @@
             </p>
             <p>
               制作过程让我对 TypeScript 有了新的认识 </p>
-          </li>
-          <li>
-            <header>
-              <h3>UI库</h3>
-              <span>
-                <a href="https://github.com/Flandutiantian/vue3">源码链接</a>
-                <a href="https://flandutiantian.github.io/lunzi-ui-website/">项目预览</a>
-              </span>
-            </header>
-            <p>这是一个基于 <strong>Vue 3</strong> + <strong>TypeScript</strong> 的 UI 库，涵盖了 Button, Tabs, Switch, Dialog …
-              等常见UI组件。</p>
-            <p>深入研究 Vue 3, 使用了 <strong>setup</strong>、<strong>onMounted</strong>、
-              <strong>watchEffect</strong>、<strong>ref</strong>、<strong>computed</strong>等Compositioin
-              API,
-            </p>
-            <p>模块化的源代码筍洁明了，易于阅读</p>
-            <p>还推出了官万文档，可在线查看代码，并支持 PC 和手机浏览。</p>
+
+            <h4 class="four">项目经验：</h4>
+
+            <ul>
+              <li>基于 Vue 2 、TypeScript 和 vue-cli 脚手架进行开发，vue-cli 脚手架内置 Webpack，需要注意
+                Webpakc 的各项配置以及 TypeScript 与 Vue 之间的配置。</li>
+              <p>分析设计需求，将项目中各个页面也进行组件化的拆分，将具备重复功能的组件进行复用，减少重复</p>
+              <p>由于各页面和组件之数据流向复杂，故统一使用 Vuex 工具管理用户数据状态，并使用 localStorage 以
+                控制用户数据在本地的持久化，存储和读取等。</p>
+              <p>采⽤ TypeScript 语⾔在 Vue 2 中进⾏开发的体验并不⼗分好。Vue 2 对 TypeScript 的⽀持不够完
+                美，需要⼤量使⽤装饰器语法来配合构建 Vue 组件。</p>
+              <p>不过考虑到 Vue 2 项⽬在市场上⽐较成熟，使⽤
+                TypeScript 对项⽬进⾏重构的需求也较为旺盛，熟练掌握这⼀技术组合开发项⽬是必备技能。踩坑并解决了这⼀组合相关的⼀些 bug。</p>
+              <p>可视化部分引⼊ Echarts 模块，通过查阅⽂档和实例，实现了两种数据可视化形式，折线图和饼图，熟悉了可视化模块的使⽤。熟练使⽤ JS，将⽤户数据重新分类处理成不同的形式，提供给 Echarts 使
+                ⽤。</p>
+            </ul>
           </li>
         </ol>
       </section>
 
 
-
-
       <section class="openSource">
-        <h2>开源项目</h2>
         <ul>
+
           <li>
             <header>
-              <h3>前端导航</h3>
+              <h3>在线画板</h3>
               <span>
-                <a href="https://github.com/Flandutiantian/navigation">源码链接</a>
-                <a href="https://flandutiantian.github.io/navigation/dist/">项目预览</a>
+                <a href="https://github.com/Flandutiantian/canvas">源码链接</a>
+                <a href="https://flandutiantian.github.io/canvas/">项目预览</a>
               </span>
             </header>
-            <p>实现了元素选择、元素创建、<strong>事件委托</strong>、滑动手势等常见功能</p>
+            <div>技术栈：<code>JavaScript</code> <code>html5</code></div>
+            <h4 class="four">项目描述：</h4>
+            <p>我在学习 <strong>Canvas</strong> 时做的一个小作品。这是⼀款应⽤<strong>html5 </strong>的新特性和
+              <strong>JavaScript</strong> 编写的画板⼩应⽤。这款在线画板涂鸦⼯具，可以将⽤户⾃⼰⼿绘的内容保存成图⽚。
+              该⼯具提供画笔的颜⾊，画笔粗细，以及笔迹样式等选择，⽤户可⾃由选择并发挥创意进⾏绘图和涂鸦，是⼀个便利⼩⼯具。
+              ⽤户涂鸦之后，可以使⽤右键保存为本地图⽚
+            </p>
+            <h4 class="four">项目经验：</h4>
+            <p>熟练运用 html5 的新特性和和应用，也需要搭配一些方法，优化 Canvas 组件触发绘制的频率，减少浏
+              览器负担。我使用手写的 throttle 函数进行节流优化</p>
           </li>
-          <li class="page2">
+          <li>
             <header>
               <h3>会动的皮卡丘</h3>
               <span>
@@ -341,37 +380,40 @@
                 <a href="https://flandutiantian.github.io/test-1/dist/test.html">项目预览</a>
               </span>
             </header>
-            <p>这是我在学习 <strong>CSS3和动画</strong> 时制作的一个可爱作品</p>
+            <div>技术栈：<code>CSS3</code> <code>ES6</code><code>transform</code> </div>
+            <h4 class="four">项目描述：</h4>
+            <p>这是我在学习 <strong>CSS3</strong>、<strong>ES6和动画</strong>
+              时制作的一个可爱作品，一只可爱的皮卡丘的脸，为了方便预览到过程，特意设计成能一边看到展示的代码，同时还能看到实现代码的效果一步一步画面。</p>
+
+            <p>同时为了满足更多需求，有个更好的体验，在页面的右上方添加了暂停、播放、快速、慢速、中速键。
+            </p>
+            <h4 class="four">项目经验：</h4>
+            <p>熟练运用CSS3 布局、定位、transform、JS DOM操作还有一些其他的技巧，目的是完美还原动画形象</p>
           </li>
+
           <li>
             <header>
-              <h3>简易画板</h3>
+              <h3 class="page2">基于 jQuery 的多功能网站浏览器</h3>
               <span>
-                <a href="https://github.com/Flandutiantian/canvas">源码链接</a>
-                <a href="https://flandutiantian.github.io/canvas/">项目预览</a>
+                <a href="https://github.com/Flandutiantian/navigation">源码链接</a>
+                <a href="https://flandutiantian.github.io/navigation/dist/">项目预览</a>
               </span>
             </header>
-            <p>我在学习 <strong>Canvas</strong> 时做的一个小作品</p>
+            <div>技术栈：<code>jQuery</code> <code>localStorage</code> <code>PJavaScript</code></div>
+            <h4 class="four">项目描述：</h4>
+            <p>
+              实现了元素选择、元素创建、<strong>事件监听</strong>、<strong>DOM操作</strong>、通过<strong>媒体查询</strong>加CSS、实现PC端、滑动手势等常见功能,提高使用价值，节省时间，实现方便快捷的多功能浏览器。
+            </p>
+            <p>技术栈：jQuery、LocalStorage、SVG Symbols、媒体查询、git&Github</p>
+            <p> 它可以实现用户输入一个常用网址，他就会添加到首页，使用户在下一次打开网页变得方便快捷，很方便的存储用户的常用网站</p>
+            <p>还添加了输入网站首字母，自动跳转到首页某首字母对应网站，由于很方便，我平常也经常使用</p>
+            <h4 class="four">项目经验：</h4>
+            <p>项目的搭建依赖于对 jQuery 的熟练使用。</p>
+            <p>熟练运用 jQuery 的链式命令结构，提升 DOM 操作的效率，节约代码量</p>
           </li>
+
+
         </ul>
-      </section>
-
-
-
-      <section class="jobs">
-        <h2>工作经历</h2>
-
-        <header>
-          <h3> 华讯中星</h3>
-          <h4>外贸业务员</h4>
-          <span><time>2020年10月</time>~<time>2022年3月</time></span>
-        </header>
-        <ul>
-          <li>
-            负责公司办公家具的出口销售
-          </li>
-        </ul>
-
       </section>
 
       <section class="others">
@@ -382,13 +424,7 @@
         </ul>
       </section>
 
-      <section class="education">
-        <h2>教育经历</h2>
-        <p>
-          <span><time>2017年</time>~<time>2020年</time></span>
-          洛阳理工学院 商务英语 大专
-        </p>
-      </section>
+
 
     </article>
     <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts.min.js"></script>
